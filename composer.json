@@ -1,0 +1,27 @@
+{
+    "name": "app/milay",
+    "autoload": {
+        "psr-4": {
+            "App\\Milay\\Controller\\": "app/controller",
+            "App\\Milay\\Model\\": "app/model",
+            "App\\Milay\\Config\\": "app/config",
+            "App\\Milay\\Utils\\": "app/utils",
+            "App\\Milay\\Notify\\":"app/notify"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fetra"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "illuminate/database": "^10.48",
+        "symfony/console": "^6.4",
+        "phpmailer/phpmailer": "*",
+        "respect/validation": "^2.3",
+        "vlucas/phpdotenv": "^5.6",
+        "symfony/http-foundation": "^6.4"
+    }
+}

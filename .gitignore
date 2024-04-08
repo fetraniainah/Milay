@@ -1,0 +1,15 @@
+/vendor/
+.idea/
+.env-exemple
+/var/
+/log/
+/assets/uploads/
+#.htaccess
+*.bak
+*.swp
+*.swo
+*~
+.editorconfig
+.DS_Store
+Thumbs.db
+composer.lock
