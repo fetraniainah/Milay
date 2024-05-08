@@ -7,10 +7,4 @@ $command = new Application();
 $command->add(new CreateController());
 $command->add(new CreateModel());
 $command->run();
-
-
-
-
-
-
 ?>

@@ -16,19 +16,32 @@ class Middleware
 
     public static function auth(): void
     {
-        if (!isset($_SESSION['user'])) {
-            header("Location: /login");
+        $isLogged = SessionMaker::get("isLogged");
+        if (!$isLogged) {
+            header("Location: /admin/auth/login");
             exit;
         }
     }
 
     public static function admin():void
     {
-        return;
+        $isLogged = SessionMaker::get("isLogged");
+        $userRole = SessionMaker::get("user_roles");
+
+    if (!$isLogged || $userRole !== 'admin') {
+        header("Location: /admin/auth/login");
+        exit;
+    }
+        
     }
 
     public static function guest(){
-        return;
+        $isLogged = SessionMaker::get("isLogged");
+
+        if ($isLogged) {
+            header("Location: /admin/home");
+            exit;
+        }
     }
 
     public static function verify():void

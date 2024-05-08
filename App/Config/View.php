@@ -11,6 +11,7 @@ class View
     {
         extract($data);
         include_once __DIR__ . "/../../views/{$viewName}.php";
+        exit;
     }
 
     public static function redirect(string $url): void
@@ -19,9 +20,12 @@ class View
         exit;
     }
 
-    public static function back(): void
+    public static function back(array $data = []): void
     {
         $referer = $_SERVER['HTTP_REFERER'] ?? '/';
+        if (!empty($data)) {
+            extract($data);
+        }
         header("Location: {$referer}");
         exit;
     }

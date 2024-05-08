@@ -1,10 +1,9 @@
 <?php require_once 'components/header.php'?>
 <style>
-    .container-fluid{
-        height: 100vh;
-        background-image: repeating-linear-gradient(135deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(307,70%,63%,0.05) 0px, hsla(307,70%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(307,70%,63%,0.05) 11px, hsla(307,70%,63%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(197,1,115),rgb(96, 73, 231));
-    }
-    
+.container-fluid {
+    height: 100vh;
+    background-image: repeating-linear-gradient(135deg, hsla(307, 70%, 63%, 0.05) 0px, hsla(307, 70%, 63%, 0.05) 1px, transparent 1px, transparent 11px, hsla(307, 70%, 63%, 0.05) 11px, hsla(307, 70%, 63%, 0.05) 12px, transparent 12px, transparent 32px), repeating-linear-gradient(90deg, hsla(307, 70%, 63%, 0.05) 0px, hsla(307, 70%, 63%, 0.05) 1px, transparent 1px, transparent 11px, hsla(307, 70%, 63%, 0.05) 11px, hsla(307, 70%, 63%, 0.05) 12px, transparent 12px, transparent 32px), repeating-linear-gradient(135deg, hsla(307, 70%, 63%, 0.05) 0px, hsla(307, 70%, 63%, 0.05) 1px, transparent 1px, transparent 11px, hsla(307, 70%, 63%, 0.05) 11px, hsla(307, 70%, 63%, 0.05) 12px, transparent 12px, transparent 32px), repeating-linear-gradient(90deg, hsla(307, 70%, 63%, 0.05) 0px, hsla(307, 70%, 63%, 0.05) 1px, transparent 1px, transparent 11px, hsla(307, 70%, 63%, 0.05) 11px, hsla(307, 70%, 63%, 0.05) 12px, transparent 12px, transparent 32px), linear-gradient(90deg, rgb(197, 1, 115), rgb(96, 73, 231));
+}
 </style>
 <div class="container-fluid">
     <div class="row">

@@ -12,9 +12,13 @@ class HomeController{
         return View::render("index");
     }
 
+    public function home(){
+        return View::render('/client/index');
+    }
+
  
     public function show($id){
-        $article = Article::all();
+        $article = Article::find($id)->first();
         print_r($article);
     }
 

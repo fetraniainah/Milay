@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-fluids{
+    width: 100%;
+    height: 100vh;
+}
+.dashbord{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 250px
+}
+.off-one{
+    max-width: 250px;
+    transition:  transform 0.9s ease;
+    background-image: radial-gradient(circle at 10% 8%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 87% 45%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 9% 67%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 31% 83%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 46% 54%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 16% 24%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 18% 9%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 85% 69%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 55% 7%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 69% 69%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 68% 60%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),linear-gradient(135deg, rgb(0,0,18),rgb(3,9,40));
+}
+.side-footer{
+    width: 250px;
+}
+.dash{
+    background-image: radial-gradient(circle at 90% 24%, rgba(209, 209, 209,0.04) 0%, rgba(209, 209, 209,0.04) 50%,rgba(160, 160, 160,0.04) 50%, rgba(160, 160, 160,0.04) 100%),radial-gradient(circle at 91% 63%, rgba(45, 45, 45,0.04) 0%, rgba(45, 45, 45,0.04) 50%,rgba(87, 87, 87,0.04) 50%, rgba(87, 87, 87,0.04) 100%),radial-gradient(circle at 17% 2%, rgba(124, 124, 124,0.04) 0%, rgba(124, 124, 124,0.04) 50%,rgba(117, 117, 117,0.04) 50%, rgba(117, 117, 117,0.04) 100%),linear-gradient(88deg, rgb(10,4,38),rgb(10,1,15));
+}
+.rotate{
+   transition:  transform 0.8s ease;
+}
+.btn-side{
+    display: none;
+}
+.menus{
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    background-image: radial-gradient(circle at 17% 77%, rgba(17, 17, 17,0.04) 0%, rgba(17, 17, 17,0.04) 50%,rgba(197, 197, 197,0.04) 50%, rgba(197, 197, 197,0.04) 100%),radial-gradient(circle at 26% 17%, rgba(64, 64, 64,0.04) 0%, rgba(64, 64, 64,0.04) 50%,rgba(244, 244, 244,0.04) 50%, rgba(244, 244, 244,0.04) 100%),radial-gradient(circle at 44% 60%, rgba(177, 177, 177,0.04) 0%, rgba(177, 177, 177,0.04) 50%,rgba(187, 187, 187,0.04) 50%, rgba(187, 187, 187,0.04) 100%),linear-gradient(19deg, rgb(28, 117, 250),rgb(34, 2, 159));
+    background-size: 200% 100%;
+    transition: background-position 1.2s;
+}
+.menus:hover{
+    background-position: right;
+    color: white;
+}
+.btn-profile{
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    transition: background-position 1.2s;
+    background-image: radial-gradient(circle at 17% 77%, rgba(17, 17, 17,0.04) 0%, rgba(17, 17, 17,0.04) 50%,rgba(197, 197, 197,0.04) 50%, rgba(197, 197, 197,0.04) 100%),radial-gradient(circle at 26% 17%, rgba(64, 64, 64,0.04) 0%, rgba(64, 64, 64,0.04) 50%,rgba(244, 244, 244,0.04) 50%, rgba(244, 244, 244,0.04) 100%),radial-gradient(circle at 44% 60%, rgba(177, 177, 177,0.04) 0%, rgba(177, 177, 177,0.04) 50%,rgba(187, 187, 187,0.04) 50%, rgba(187, 187, 187,0.04) 100%),linear-gradient(288deg, rgb(28,33,250),rgb(118,2,159));
+}
+.btn-profile:hover{
+    background-position: right;
+    color: white;
+}
+
+.to-left{
+    top: 45px; 
+    right:-10px;
+    width:200px;
+    transition: right 0.3s ease;
+}
+.h-200{
+    right: -250px;
+}
+.search-content{
+    flex-grow: 1;
+}
+.search{
+    max-width: 500px;
+}
+
+.pb{
+    left: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+
+
+@media(max-width:988px){
+    .off-one{
+        position: absolute;
+        z-index: 1;
+        transition:  transform 0.5s ease;
+    }
+    .btn-side{
+        display: block;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px; 
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 4px; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
