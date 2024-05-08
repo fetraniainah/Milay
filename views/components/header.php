@@ -13,6 +13,9 @@ $success = Messages::getSuccesses();
     <title><?= get_title()?></title>
     <link rel="stylesheet" href="<?php echo BASE_PATH; ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo BASE_PATH; ?>assets/css/app.css">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
     .load {
         transition: 1s ease-out;

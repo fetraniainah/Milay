@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Message extends Model
 {
-    protected $fillable = ['recepteur', 'ematteur','message'];
+    protected $fillable = ['recepteur', 'emetteur','message'];
 }

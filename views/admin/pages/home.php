@@ -28,41 +28,19 @@ use App\Milay\Utils\SessionMaker;
             <?php get_files('components/navbar'); ?>
 
             <div class="conatiner p-4">
-                <h3 class=" text-primary">Bonjour <?= SessionMaker::get('user_name') ?></h3>
-                <p class="text-light">Here’s what happening with your store today</p>
-                <div class="row bg-warning  mt-2">
-                    <div class="col-6 py-2">
-                        <li>5 products didn’t publish to your Facebook page</li>
-                    </div>
-
-                    <div class="col-6 align-items-center py-2">
-                        <p class="m-0 text-end">Voir ></p>
-                    </div>
-                    <hr class="w-100 m-0  border-light">
-                </div>
-
-
+                <h3 class=" text-primary">Salut <?= SessionMaker::get('user_name') ?></h3>
+                <?php foreach($n as $nt): ?>
                 <div class="row  bg-dark">
                     <div class="col-6 py-2">
-                        <li class="text-light">5 products didn’t publish to your Facebook page</li>
+                        <li class="text-light"><?= ucfirst($nt->text) ?></li>
                     </div>
 
                     <div class="col-6 align-items-center py-2 ">
-                        <p class="m-0 text-end text-light">Voir ></p>
+                        <p class="m-0 text-end text-light"><i class="bi bi-bell"></i></p>
                     </div>
                     <hr class="w-100 m-0  border-light">
                 </div>
-
-                <div class="row  bg-dark">
-                    <div class="col-6 py-2">
-                        <li class="text-light">50+ orders need to be fulfilled</li>
-                    </div>
-
-                    <div class="col-6 align-items-center py-2 ">
-                        <p class="m-0 text-end text-light">Voir ></p>
-                    </div>
-                    <hr class="w-100 m-0  border-light">
-                </div>
+                <?php endforeach ?>
 
                 <!------------------------ Weekly shall---------------->
                 <div class="d-flex  gap-2 flex-wrap-md mt-3">

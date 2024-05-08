@@ -26,21 +26,23 @@
             font-size: x-small;
         }
         </style>
-        <div class="container py-4">
+        <div class="container py-1">
             <div class="row mx-auto">
-                <div class="col-md-10 mx-auto">
-                    <h3 class="text-center text-white">
-                        Messages
-                        <?php foreach($message as $m): ?>
-                        <div class="d-grid bg-dark rounded-2 p-2 my-2">
-                            <p class="text-white nt text-start p-0 m-0 text-small"><?= $n["text"] ?></p>
-                            <label
-                                class="text-label lb text-start text-small text-white"><?= $n["created_at"] ?></label>
-                        </div>
+                <div class="col-md-10 bg-dark rounded-3 mx-auto" style="height: 90vh; overflow-y: auto;">
+                    <h3 class="text-center text-white">Messages</h3>
 
-                        <?php endforeach ?>
-                    </h3>
+                    <!-- Affichage des messages -->
+                    <?php foreach ($messages as $message): ?>
+                    <a href="/admin/<?= $message->emetteur ?>/message" class="" style="text-decoration: none;">
+                        <div class="d-grid bg-secondary shadow-sm rounded-2 p-2 my-2">
+                            <p class="text-white nt text-start p-0 m-0 text-small"><?= $message->message ?></p>
+                            <label
+                                class="text-label lb text-start text-small text-white"><?= $message->created_at ?></label>
+                        </div>
+                    </a>
+                    <?php endforeach ?>
                 </div>
+
             </div>
         </div>
     </div>

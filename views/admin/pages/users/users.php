@@ -28,8 +28,10 @@ use App\Milay\Utils\SessionMaker;
                 <div class="col-10 mx-auto  rounded-3">
                     <div class=" px-5 py-3 d-flex justify-content-between align-items-center">
                         <h3 class="text-white">Admin</h3>
+                        <?php if(SessionMaker::get("user_email")=="tahiri.fetra@gmail.com"): ?>
                         <a href="#" class="btn btn-sm btn-success" data-bs-toggle="modal"
                             data-bs-target="#add">Ajouter</a>
+                        <?php endif ?>
                     </div>
                     <div class="table-responsive py-3 bg-dark rounded-3 mt-3">
 

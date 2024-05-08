@@ -257,17 +257,18 @@ class ArticleController
 
         $user = User::where('username', 'like', '%' . $search . '%')
         ->orWhere('email', 'like', '%' . $search . '%')
-        ->orWhere('description', 'like', '%' . $search . '%')
         ->get();
+        
 
         $article = Article::where('name', 'like', '%' . $search . '%')
         ->orWhere('description', 'like', '%' . $search . '%')
         ->get();
-        $categorie = Category::where("name",$search)->get();
+        $categorie = Category::where("name", 'like', '%' . $search . '%')->get();
         
-        $result = array($user, $article,$categorie);
+        $result = array("user"=>$user, "article"=>$article,"categorie"=>$categorie);
 
-        return View::render('admin/pages/search/index',["res"=>$result]);
+
+        return View::render('admin/pages/search/index',["result"=>$result]);
       }
 
       public function post_search(){

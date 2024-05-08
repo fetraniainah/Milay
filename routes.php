@@ -99,5 +99,11 @@ $router->map('GET','/admin/search_result','ArticleController#result');
 $router->map('POST','/admin/search','ArticleController#post_search');
 
 
+/**
+ * Message
+ */
 
+ $router->map('GET','/admin/message','MessageController#index');
+ $router->map('POST','/admin/message/post','MessageController#post');
+ $router->map('GET','/admin/[i:id]/message','MessageController#show');
 ?>

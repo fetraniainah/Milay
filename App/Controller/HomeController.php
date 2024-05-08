@@ -4,8 +4,14 @@ namespace App\Milay\Controller;
 
 use App\Milay\Config\View;
 use App\Milay\Model\Article;
+use App\Milay\Model\Notification;
+use App\Milay\Utils\Middleware;
 
 class HomeController{
+    public function __construct()
+    {
+        Middleware::apply(['admin']);
+    }
 
     
     public function index(){
@@ -13,6 +19,7 @@ class HomeController{
     }
 
     public function home(){
+       
         return View::render('/client/index');
     }
 

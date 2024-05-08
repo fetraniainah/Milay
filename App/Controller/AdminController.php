@@ -24,8 +24,11 @@ class AdminController
     }
     public function index()
     {
+        $notifications = Notification::orderBy('created_at', 'desc')
+        ->limit(3)
+        ->get();
        
-       return View::render('/admin/pages/home');
+       return View::render('/admin/pages/home',["n"=>$notifications]);
     }
 
     public function show(){
@@ -116,7 +119,7 @@ class AdminController
 
     public function users(){
         $user = User::all();
-        return View::render('/admin/pages/user/users',["user"=>$user]);
+        return View::render('/admin/pages/users/users',["user"=>$user]);
     }
 
     public function deleteuser($id){
