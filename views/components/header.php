@@ -13,8 +13,22 @@ $success = Messages::getSuccesses();
     <title><?= get_title()?></title>
     <link rel="stylesheet" href="<?php echo BASE_PATH; ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo BASE_PATH; ?>assets/css/app.css">
+    <style>
+    .load {
+        transition: 1s ease-out;
+        overflow: hidden;
+    }
+    </style>
     <script src="<?php echo BASE_PATH; ?>assets/js/jq.js"></script>
     <script src="<?php echo BASE_PATH; ?>assets/js/htmx.min.js"></script>
 </head>
 
 <body>
+    <div class="load w-100 h-100 position-absolute bg-white d-flex justify-content-center align-items-center"
+        style="z-index: 1;">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-primary spinner-border-lg" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>

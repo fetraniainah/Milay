@@ -81,6 +81,7 @@ $router->map('GET','/admin/category/delete/[i:id]','CategoryController#delete');
 
 $router->map('GET','/admin/utilisateur','AdminController#users');
 $router->map('POST','/admin/utilisateur/add','AdminController#postRegister');
+$router->map('GET','/admin/delete/user/[i:id]','AdminController#deleteuser');
 
 
 /**
@@ -89,6 +90,13 @@ $router->map('POST','/admin/utilisateur/add','AdminController#postRegister');
 
 $router->map('GET','/admin/notification','ArticleController#listNotification');
 $router->map('POST','/admin/post/notification','ArticleController#postNotification');
+
+/**
+ * Search
+ */
+
+$router->map('GET','/admin/search_result','ArticleController#result');
+$router->map('POST','/admin/search','ArticleController#post_search');
 
 
 

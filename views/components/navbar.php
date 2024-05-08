@@ -66,16 +66,18 @@ hr {
         </div>
 
         <div class="search-content col   mx-auto">
-            <div class=" mx-auto  mx-3 position-relative search">
-                <input type="search"
-                    class="form-control shadow-none border-primary ps-5 bg-transparent text-white rounded-4 border-1"
-                    name="" id="" aria-describedby="helpId" placeholder="" />
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-search pb"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-            </div>
+            <form action="/admin/search" method="post" id="post_search">
+                <div class=" mx-auto  mx-3 position-relative search">
+                    <input type="search"
+                        class="form-control shadow-none border-primary ps-5 bg-transparent text-white rounded-4 border-1"
+                        name="s" id="search" aria-describedby="helpId" placeholder="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-search pb"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </div>
+            </form>
         </div>
 
         <div class="d-flex gap-2 position-relative">

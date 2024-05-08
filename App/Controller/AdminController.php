@@ -3,6 +3,7 @@
 namespace App\Milay\Controller;
 
 use App\Milay\Config\View;
+use App\Milay\Model\Message;
 use App\Milay\Model\Notification;
 use App\Milay\Model\User;
 use App\Milay\Utils\Messages;
@@ -109,10 +110,25 @@ class AdminController
             }
         }
 
+        return View::back();
+
     }
 
     public function users(){
         $user = User::all();
-        return View::render('/admin/pages/users/users',["user"=>$user]);
+        return View::render('/admin/pages/user/users',["user"=>$user]);
+    }
+
+    public function deleteuser($id){
+        if(isset($id)){
+            $user = User::find($id);
+            $user->delete();
+            Messages::setSuccess("success","L'utilisateur $user->username a étè supprimer");
+        }else{
+            Messages::setError("error","Aucun utilisateur avec l'id $id");
+        }
+
+        return View::back();
+
     }
 }

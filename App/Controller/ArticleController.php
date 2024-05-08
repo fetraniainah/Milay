@@ -7,6 +7,7 @@ use App\Milay\Model\Article;
 use App\Milay\Model\Category;
 use App\Milay\Model\Images;
 use App\Milay\Model\Notification;
+use App\Milay\Model\User;
 use App\Milay\Utils\Messages;
 use App\Milay\Utils\Middleware;
 use App\Milay\Utils\RequestMaker;
@@ -249,4 +250,30 @@ class ArticleController
         $notification = Notification::all();
         return View::render('admin/pages/notification/index',["notification"=>$notification]);
       }
+
+
+      public function result(){
+        $search = SessionMaker::get("s");
+
+        $user = User::where('username', 'like', '%' . $search . '%')
+        ->orWhere('email', 'like', '%' . $search . '%')
+        ->orWhere('description', 'like', '%' . $search . '%')
+        ->get();
+
+        $article = Article::where('name', 'like', '%' . $search . '%')
+        ->orWhere('description', 'like', '%' . $search . '%')
+        ->get();
+        $categorie = Category::where("name",$search)->get();
+        
+        $result = array($user, $article,$categorie);
+
+        return View::render('admin/pages/search/index',["res"=>$result]);
+      }
+
+      public function post_search(){
+        $s = htmlspecialchars($this->request['s']);
+        SessionMaker::set("s",$s);
+        return View::redirect('/admin/search_result');
+      }
+
 }
