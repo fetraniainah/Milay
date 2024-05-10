@@ -67,11 +67,7 @@ class AdminController
         
         return View::back();
     }
-
-
-    public function userList(){
-        return View::render('/client/page');
-    }
+    
 
     public function logout(){
         SessionMaker::destroy('/admin/auth/login');

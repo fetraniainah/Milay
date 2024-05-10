@@ -42,15 +42,15 @@ class AuthController
     }
 
     public function active(){
-       //$code = $this->request["activate"];
-       //$verify = SessionMaker::get("loadcode");
-       //if($verify==$code){
+       $code = $this->request["activate"];
+       $verify = SessionMaker::get("loadcode");
+       if($verify==$code){
         SessionMaker::set("isLogged",true);
         return View::redirect("/admin/home");
-       // }else{
-         //   Messages::setError("code","Code d'activation incorrect");
-          //  return View::back();
-       // }
+        }else{
+            Messages::setError("code","Code d'activation incorrect");
+            return View::back();
+        }
 
     }
 
@@ -66,15 +66,15 @@ class AuthController
                 $mailsender = new PushNotification();
                 $userEmail = $email;
                 $verificationCode = $this->genererCode();
-                //$htmlContent = file_get_contents('views/push.php');
-               // $htmlContent = str_replace('{verification_code}', $verificationCode, $htmlContent);
-               // if ($mailsender->sendMail($userEmail, $htmlContent,true)) {
+                $htmlContent = file_get_contents('views/push.php');
+                $htmlContent = str_replace('{verification_code}', $verificationCode, $htmlContent);
+                if ($mailsender->sendMail($userEmail, $htmlContent,true)) {
                     SessionMaker::set("user_id",$res["id"]);
                     SessionMaker::set("user_name",$res["username"]);
                     SessionMaker::set("user_email",$res["email"]);
                     SessionMaker::set("user_roles",$res["roles"]);
                     SessionMaker::set("loadcode",$verificationCode);
-               // }
+                }
 
                 
                 View::redirect("/admin/auth/verification-code");

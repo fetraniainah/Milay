@@ -1,6 +1,5 @@
 <?php 
 $router->map('GET', '/', 'HomeController#index');
-$router->map('GET', '/page', 'AdminController#userList');
 
 /**
  * Authentification

@@ -6,7 +6,7 @@
 }
 
 .col-md-5 {
-    max-width: 450px;
+    max-width: 350px;
 }
 
 @media (max-width:1000px) {
@@ -24,14 +24,15 @@
         <div class="col-md-5 shadow-sm rounded-3 py-1 mx-auto position-absolute top-50 start-50 translate-middle">
 
 
-            <div class="d-flex justify-content-between align-items-center border-2 bg-dark rounded-3 mb-3 border-primary p-2"
-                style="border: dotted;">
-                <img src="<?php base_url('assets/uploads/logo.png') ?>" alt="logo" width="150" height="60">
-                <h3 class="text-center text-primary" style="font-weight: 800; font-size:2.4rem">Admin</h3>
+            <div class="d-grid justify-content-center py-3">
+                <div class="rounded-circle bg-dark d-flex justify-content-center align-items-center"
+                    style="width: 100px; height:100px">
+                    <img src="<?php  base_url("assets/uploads/logo.png")?> " class="img-fluid">
+                </div>
+
             </div>
 
             <form action="/postLogin" method="post" class="bg-dark p-4 rounded-3">
-                <h4 class="text-primary py-2">Se connecter</h4>
                 <div class="mb-3">
                     <input type="text" class="form-control bg-transparent text-white border-light shadow-none"
                         name="email" id="email" aria-describedby="emailHelpId" placeholder="abc@mail.com" />

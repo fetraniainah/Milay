@@ -62,7 +62,9 @@ hr {
                         d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </button>
-            <a class="navbar-brand px-3 fw-bold text-white d-none d-sm-block" href="#">Milay</a>
+            <a class="navbar-brand px-3 fw-bold text-white d-none d-sm-block" href="#">
+                <img src="<?php base_url('assets/uploads/logo.png') ?>" alt="logo"
+                    style="object-fit: cover;width:50px"></a>
         </div>
 
         <div class="search-content col   mx-auto">

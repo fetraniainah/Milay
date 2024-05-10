@@ -23,7 +23,7 @@
             <div class="row py-5">
                 <div class="col-md-5 mx-auto bg-light rounded-3">
                     <div class="d-grid justify-content-center py-3">
-                        <img src="<?php  base_url("assets/uploads/logo.png")?> " class="rounded-circle bg-info"
+                        <img src="<?php  base_url("assets/uploads/logo.png")?> " class="rounded-circle bg-dark"
                             width="100" height="100" alt="">
                     </div>
                     <h3 class=" p-1 rounded-3 mb-2 text-center"> <?= $user["userName"] ?></h3>

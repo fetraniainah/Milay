@@ -33,6 +33,7 @@ use App\Milay\Utils\SessionMaker;
                 <div class="row  bg-dark">
                     <div class="col-6 py-2">
                         <li class="text-light"><?= ucfirst($nt->text) ?></li>
+                        <small class="text-light ps-3" style="font-size: xx-small"><?= $nt->created_at ?></small>
                     </div>
 
                     <div class="col-6 align-items-center py-2 ">
@@ -44,17 +45,22 @@ use App\Milay\Utils\SessionMaker;
 
                 <!------------------------ Weekly shall---------------->
                 <div class="d-flex  gap-2 flex-wrap-md mt-3">
-                    <div class="col-6 bg-dark mx-auto rounded-3 p-2">
-                        <p class="m-0 text-light">Weekly salle</p>
-                        <h5 class="m-0 text-primary">47K</h5>
-                        <span class="badge bg-success">+3.5%</span>
+                    <div class="col-4 bg-dark mx-auto rounded-3 p-2">
+                        <p class="m-0 text-light">Télma</p>
+                        <h5 class="m-0 text-primary">120 000</h5>
+                        <span class="badge bg-success">+33.5%</span>
 
                     </div>
 
-                    <div class="col-6 bg-dark mx-auto rounded-3 p-2 ">
-                        <p class="m-0 text-light">Product share</p>
-                        <h5 class="m-0 text-primary">30 %</h5>
-                        <span class="badge bg-success">+3.5%</span>
+                    <div class="col-4 bg-dark mx-auto rounded-3 p-2 ">
+                        <p class="m-0 text-light">Airtel</p>
+                        <h5 class="m-0 text-primary">500 000</h5>
+                        <span class="badge bg-success">-3.5%</span>
+                    </div>
+                    <div class="col-4 bg-dark mx-auto rounded-3 p-2 ">
+                        <p class="m-0 text-light">Orange</p>
+                        <h5 class="m-0 text-primary">600 000</h5>
+                        <span class="badge bg-success">+53.5%</span>
                     </div>
                 </div>
 
@@ -63,7 +69,7 @@ use App\Milay\Utils\SessionMaker;
                 <!------------------------Recent purchapse------------------------------------>
 
                 <div class="table-responsive py-3 bg-dark rounded-3 mt-3">
-                    <h6 class="m-0 text-primary px-4">Recent purchapse</h6>
+                    <h6 class="m-0 text-primary px-4">Dernière commandes</h6>
                     <table class="table table-dark">
                         <thead>
                             <tr>
@@ -71,70 +77,33 @@ use App\Milay\Utils\SessionMaker;
                                 <th scope="col">Télephone</th>
                                 <th scope="col">Adresse</th>
                                 <th scope="col">Articles</th>
-                                <th scope="col">Payment status</th>
-                                <th scope="col">Some</th>
+                                <th scope="col">Status de payment</th>
+                                <th scope="col">Methode de payment</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="">
-                                <td scope="row">R1C1</td>
-                                <td>R1C2</td>
-                                <td>R1C3</td>
-                                <td scope="row">R1C1</td>
-                                <td>R1C2</td>
-                                <td>R1C3</td>
-                            </tr>
-                            <tr class="">
-                                <td scope="row">Item</td>
-                                <td>Item</td>
-                                <td>Item</td>
-                                <td scope="row">Item</td>
-                                <td>Item</td>
-                                <td>Item</td>
+                                <td scope="row">aina@gmail.com</td>
+                                <td>0326578698</td>
+                                <td>IVA 234 Ankaoraobato</td>
+                                <td scope="row">Sweet homme</td>
+                                <td>En attend</td>
+                                <td>Télma</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-------------------------Chart to show customer rate--------------->
-
-                <div class="row  py-3 gap-3">
-                    <div class="col-md-11 mx-auto py-1 bg-dark rounded-3">
-                        <div class="chart-container">
-                            <canvas id="sales-chart"></canvas>
-                        </div>
+                <div class="row mx-auto py-3">
+                    <div class="col-md-5 mx-auto bg-dark rounded-3 m-2">
+                        <h4 class="text-white textècenter">Visiteur</h4>
                     </div>
-                </div>
 
+                    <div class="col-md-6 mx-auto bg-dark rounded-3 m-2">
+                        <h4 class="text-white textècenter">Utilisateur</h4>
 
-                <!------------------------Best seller------------------------------------>
+                    </div>
 
-                <div class="table-responsive py-3 bg-dark rounded-3 mt-3">
-                    <h6 class="m-0 text-primary px-4">Best seller</h6>
-                    <table class="table table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">Article vendues</th>
-                                <th scope="col">Quantités</th>
-                                <th scope="col">Quantité / %</th>
-                                <th scope="col">Revenue</th>
-                                <th scope="col">Revenues / %</th>
-                                <th scope="col">Stock</th>
-                                <th scope="col">Stock / %</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="">
-                                <td scope="row">Article 1</td>
-                                <td>15</td>
-                                <td>16 %</td>
-                                <td>12000000</td>
-                                <td>45 %</td>
-                                <td>10</td>
-                                <td>74 %</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
